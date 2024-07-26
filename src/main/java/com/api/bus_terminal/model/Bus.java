@@ -10,7 +10,7 @@ import jakarta.persistence.Id;
 public class Bus {
     
     @Id
-    private int licencePlate;
+    private long id;
     private String tipe;
     private int seats;
     private double maxSpeed;
@@ -18,8 +18,8 @@ public class Bus {
     public Bus() {
     }
 
-    public Bus(int licencePlate, String tipe, int seats, double maxSpeed) {
-        this.licencePlate = licencePlate;
+    public Bus(long id, String tipe, int seats, double maxSpeed) {
+        this.id = id;
         this.tipe = tipe;
         this.seats = seats;
         this.maxSpeed = maxSpeed;

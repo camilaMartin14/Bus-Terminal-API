@@ -1,6 +1,9 @@
 package com.api.bus_terminal.service;
 
+import com.api.bus_terminal.model.Address;
+import com.api.bus_terminal.model.Bus;
 import com.api.bus_terminal.model.Company;
+import java.util.ArrayList;
 import java.util.List;
 
 public interface ICompanyService {
@@ -14,12 +17,9 @@ public interface ICompanyService {
     public void deleteCompany(long id);
 
     public void editCompany(long id,
-                            String country,
-                            String city,
-                            String street,
-                            int number,
-                            String neighborhood,
-                            int postalCode);
+                            String name,
+                            ArrayList <Bus> buses,
+                            Address address);
 
     public void editCompany(Company com); 
 }

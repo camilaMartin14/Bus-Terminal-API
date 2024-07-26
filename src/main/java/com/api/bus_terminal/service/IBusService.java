@@ -7,13 +7,13 @@ public interface IBusService {
     
     public List <Bus> getBuses();
     
-    public Bus findBus(int licencePlate);
+    public Bus findBus(long id);
     
     public void saveBus(Bus b);
     
-    public void deleteBus(int licencePlate);
+    public void deleteBus(long id);
 
-    public void editBus(int licencePlate,
+    public void editBus(long id,
                         String tipe,
                         int seats,
                         double maxSpeed);

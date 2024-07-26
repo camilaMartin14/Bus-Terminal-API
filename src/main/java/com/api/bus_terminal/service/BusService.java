@@ -1,20 +1,27 @@
 package com.api.bus_terminal.service;
 
 import com.api.bus_terminal.model.Bus;
+import com.api.bus_terminal.repository.IBusRepository;
 import java.util.List;
+import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
 @Service
 public class BusService implements IBusService {
+    
+    @Autowired
+    private IBusRepository busRepo;
 
     @Override
     public List<Bus> getBuses() {
-
+        List <Bus> listBuses = busRepo.findAll();
+        return listBuses;
     }
 
     @Override
-    public Bus findBus(int licencePlate) {
-
+    public Bus findBus(long id) {
+        Bus b = busRepo.findById(id).orElse(null);
+        return b;
     }
 
     @Override
@@ -23,12 +30,12 @@ public class BusService implements IBusService {
     }
 
     @Override
-    public void deleteBus(int licencePlate) {
+    public void deleteBus(long id) {
 
     }
 
     @Override
-    public void editBus(int licencePlate, String tipe, int seats, double maxSpeed) {
+    public void editBus(long id, String tipe, int seats, double maxSpeed) {
 
     }
 

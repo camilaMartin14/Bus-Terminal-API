@@ -1,6 +1,5 @@
 package com.api.bus_terminal.service;
 
-import com.api.bus_terminal.model.Company;
 import com.api.bus_terminal.model.Driver;
 import java.time.LocalDate;
 import java.util.List;
@@ -11,7 +10,7 @@ public interface IDriverService {
     
     public Driver findDriver(long id);
     
-    public void saveDriver(Company com);
+    public void saveDriver(Driver dri);
     
     public void deleteDriver(long id);
 
