@@ -12,7 +12,7 @@ import lombok.Setter;
 public class Company {
     
     @Id
-    private int id;
+    private long id;
     private String name;
     private ArrayList <Bus> buses;
     private Address address;

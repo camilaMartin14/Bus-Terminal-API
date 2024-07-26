@@ -1,5 +1,8 @@
 package com.api.bus_terminal.service;
 
-public class DriverService {
+import org.springframework.stereotype.Service;
+
+@Service
+public class DriverService implements IDriverService{
     
 }
